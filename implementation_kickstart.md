@@ -6,7 +6,7 @@ Spec demo by Lee Enterprises Unlimited. Front-end only. One goal: every action l
 ## Plan
 
 1. Assets: 41 real listing photos in `public/images/raw/` converted to `.webp` in `public/images/` by `scripts/optimize-images.mjs` (sharp). Generated hero loop and 4K still in `public/media/generated/` (AI-generated, approved by Hunter, hero only).
-2. Stack: Next.js 15 App Router, TypeScript, Tailwind CSS v4, lucide-react, react-day-picker, @vercel/analytics. Motion is CSS-only (keyframes and transitions), confined to the hero waterline reveal and the day dial, so it starts on first paint and adds no JS weight.
+2. Stack: Next.js 15 App Router, TypeScript, Tailwind CSS v4, lucide-react, react-day-picker, @vercel/analytics. Fraunces is self-hosted (static optical size 144, 55 KB) via next/font/local; Hanken Grotesk via next/font/google. Motion is CSS-only (keyframes and transitions), confined to the hero waterline reveal and the day dial, so it starts on first paint and adds no JS weight.
 3. Data lives in `lib/`: `business.ts` (facts), `copy.ts` (en + es), `gallery.ts`, `day.ts`, `site.ts` (launch switch), `contact.ts` (WhatsApp/Airbnb fallback links), `schema.ts` (JSON-LD).
 4. One component per section in `components/sections/`, plus `components/StayPlanner/` and `components/DayDial/`. No file over 500 lines.
 5. Launch switch: `NEXT_PUBLIC_SITE_MODE` (`demo` default, or `live`) and `NEXT_PUBLIC_SITE_URL`.
@@ -33,27 +33,27 @@ Spec demo by Lee Enterprises Unlimited. Front-end only. One goal: every action l
 
 ## Build checklist
 
-- [ ] Phase 1: scaffold, tokens, fonts, wordmark, nav, hero with the video loop and the waterline reveal, footer
-- [ ] Phase 2: private side and community side, A Day at Casa Esmeralda dial (six stops, auto-play once, keyboard)
-- [ ] Phase 3: rooms tour with arched frames, amenities, gallery with filters and lightbox
-- [ ] Phase 4: Arenas bento, proof, nearby strip, reviews band, FAQ, final call to action
-- [ ] Phase 5: Stay Planner with live bed diagram, pre-selects, WhatsApp and Airbnb fallback, mobile sticky bar, `/contact`
-- [ ] Phase 5b: EN | ES toggle with `lib/copy.ts`
-- [ ] Phase 6: launch switch, titles and descriptions, single h1, JSON-LD, robots, sitemap, `llms.txt`, OG image, favicon, 404, `SEO-LAUNCH.md`
-- [ ] Phase 6b: Lighthouse on a production build, live and demo, mobile and desktop
-- [ ] Phase 7: final review, commit, ready for GitHub and Vercel
+- [x] Phase 1: scaffold, tokens, fonts, wordmark, nav, hero with the video loop and the waterline reveal, footer
+- [x] Phase 2: private side and community side, A Day at Casa Esmeralda dial (six stops, auto-play once, keyboard)
+- [x] Phase 3: rooms tour with arched frames, amenities, gallery with filters and lightbox
+- [x] Phase 4: Arenas bento, proof, nearby strip, reviews band, FAQ, final call to action
+- [x] Phase 5: Stay Planner with live bed diagram, pre-selects, WhatsApp and Airbnb fallback, mobile sticky bar, `/contact`
+- [x] Phase 5b: EN | ES toggle with `lib/copy.ts`
+- [x] Phase 6: launch switch, titles and descriptions, single h1, JSON-LD, robots, sitemap, `llms.txt`, OG image, favicon, 404, `SEO-LAUNCH.md`
+- [x] Phase 6b: Lighthouse on a production build, live and demo, mobile and desktop
+- [x] Phase 7: final review, commit, ready for GitHub and Vercel
 
 ## Final review checklist
 
-- [ ] Hero sells the stay; loop smooth; waterline reveal plays once; at 375px headline and primary button visible above the fold; poster instead of video on phones
-- [ ] Day dial: six real photos, mouse, touch, keyboard, auto-play once, AA at every stop, "Book this day" pre-selects trip type
-- [ ] Every "Check My Dates" opens the planner with the right pre-selects; bed diagram 1 to 6; WhatsApp message correct; empty number copies and opens Airbnb; every Airbnb link is the real listing
-- [ ] Every "only this home has" item present
-- [ ] Zero em dashes, zero "--", no stock or extra AI images, no `gen-` file outside the hero and OG image, no invented facts, no prices, no "beachfront"
-- [ ] DRAFT items labelled or commented
-- [ ] 2 fonts, 3 colours plus text, motion in 2 sections only
-- [ ] 375px: no overflow, burger works, sticky bar works
-- [ ] Footer on both pages; demo serves noindex and the concept line; live serves index, sitemap, no concept line
-- [ ] OG image and favicon are Casa Esmeralda's
-- [ ] Lighthouse: SEO 100 live; others 90+; demo only fails the indexing audit
-- [ ] One h1 per page with "vacation rental" and "Herradura"; unique titles and descriptions; JSON-LD valid and true
+- [x] Hero sells the stay; loop smooth; waterline reveal plays once; at 375px headline and primary button visible above the fold; poster instead of video on phones
+- [x] Day dial: six real photos, mouse, touch, keyboard, auto-play once, AA at every stop, "Book this day" pre-selects trip type
+- [x] Every "Check My Dates" opens the planner with the right pre-selects; bed diagram 1 to 6; WhatsApp message correct; empty number copies and opens Airbnb; every Airbnb link is the real listing
+- [x] Every "only this home has" item present
+- [x] Zero em dashes, zero "--", no stock or extra AI images, no `gen-` file outside the hero and OG image, no invented facts, no prices, no "beachfront"
+- [x] DRAFT items labelled or commented
+- [x] 2 fonts, 3 colours plus text, motion in 2 sections only
+- [x] 375px: no overflow, burger works, sticky bar works
+- [x] Footer on both pages; demo serves noindex and the concept line; live serves index, sitemap, no concept line
+- [x] OG image and favicon are Casa Esmeralda's
+- [x] Lighthouse: SEO 100 live; others 90+; demo only fails the indexing audit
+- [x] One h1 per page with "vacation rental" and "Herradura"; unique titles and descriptions; JSON-LD valid and true

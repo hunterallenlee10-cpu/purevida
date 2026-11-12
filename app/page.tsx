@@ -8,6 +8,12 @@ import { TwoWorlds } from "@/components/sections/TwoWorlds";
 import { DayDial } from "@/components/DayDial/DayDial";
 import { House } from "@/components/sections/House";
 import { Gallery } from "@/components/sections/Gallery";
+import { Arenas } from "@/components/sections/Arenas";
+import { Proof } from "@/components/sections/Proof";
+import { Nearby } from "@/components/sections/Nearby";
+import { Reviews } from "@/components/sections/Reviews";
+import { Faq } from "@/components/sections/Faq";
+import { FinalCta } from "@/components/sections/FinalCta";
 import { isLive } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -37,6 +43,12 @@ export default function HomePage() {
         <DayDial />
         <House />
         <Gallery />
+        <Arenas />
+        <Proof />
+        <Nearby />
+        <Reviews />
+        <Faq />
+        <FinalCta />
       </main>
       <Footer showConcept={!isLive} />
       <MobileBar />

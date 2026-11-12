@@ -205,8 +205,8 @@ export function DayDial() {
                       onClick={() => goTo(i)}
                       className={`flex min-h-11 flex-col whitespace-nowrap leading-tight ${i === 0 ? "items-start" : last ? "items-end" : "items-center"} ${i === active ? `${accentText} font-semibold` : muted}`}
                     >
-                      <span className="hidden text-[0.8125rem] tabular-nums sm:block">{s.time}</span>
-                      <span className="text-[0.75rem] sm:text-[0.9375rem]">{s.name[lang]}</span>
+                      <span className="text-[0.8125rem] tabular-nums">{s.time}</span>
+                      <span className="sr-only sm:not-sr-only sm:text-[0.9375rem]">{s.name[lang]}</span>
                     </button>
                   </li>
                 );

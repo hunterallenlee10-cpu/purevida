@@ -51,6 +51,7 @@
     border-radius: 6px;
   }
   .on-dark :focus-visible { outline-color: var(--color-accent-light); }
+  h2[tabindex="-1"]:focus, h3[tabindex="-1"]:focus, span[tabindex="-1"]:focus { outline: none; }
 
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
@@ -187,7 +188,7 @@
 .step-back { animation: step-in-left 200ms ease-out both; }
 
 /* Range calendar inside the planner */
-.planner-calendar {
+.planner-calendar .rdp-root {
   --rdp-accent-color: var(--color-accent);
   --rdp-accent-background-color: #F6E4DC;
   --rdp-range_middle-background-color: #F6E4DC;
@@ -206,6 +207,8 @@
   --rdp-nav-height: 44px;
   --rdp-nav_button-width: 44px;
   --rdp-nav_button-height: 44px;
+  --rdp-range_start-background: linear-gradient(var(--rdp-gradient-direction), transparent 50%, var(--rdp-range_middle-background-color) 50%);
+  --rdp-range_end-background: linear-gradient(var(--rdp-gradient-direction), var(--rdp-range_middle-background-color) 50%, transparent 50%);
   font-size: 0.9375rem;
 }
 .planner-calendar .rdp-months { gap: 2rem; flex-wrap: wrap; }

@@ -14,6 +14,8 @@ import { Nearby } from "@/components/sections/Nearby";
 import { Reviews } from "@/components/sections/Reviews";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
+import { JsonLd } from "@/components/JsonLd";
+import { faqSchema, vacationRentalSchema } from "@/lib/schema";
 import { isLive } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -27,11 +29,18 @@ export const metadata: Metadata = {
     description:
       "Brand-new 3-bedroom vacation home with a private waterfall pool in gated Arenas, Herradura, Costa Rica. 5 minutes from the beach. Check your dates.",
   },
+  twitter: {
+    title: "Vacation Rental in Herradura, Costa Rica | Casa Esmeralda",
+    description:
+      "Brand-new 3-bedroom vacation home with a private waterfall pool in gated Arenas, Herradura, Costa Rica. 5 minutes from the beach. Check your dates.",
+  },
 };
 
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={vacationRentalSchema()} />
+      <JsonLd data={faqSchema()} />
       <a href="#main" className="sr-only z-50 rounded-full bg-accent px-4 py-3 font-semibold text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4">
         Skip to content
       </a>

@@ -37,8 +37,8 @@ Spec demo by Lee Enterprises Unlimited. Front-end only. One goal: every action l
 - [x] Phase 2: private side and community side, A Day at Casa Esmeralda dial (six stops, auto-play once, keyboard)
 - [x] Phase 3: rooms tour with arched frames, amenities, gallery with filters and lightbox
 - [x] Phase 4: Arenas bento, proof, nearby strip, reviews band, FAQ, final call to action
-- [ ] Phase 5: Stay Planner with live bed diagram, pre-selects, WhatsApp and Airbnb fallback, mobile sticky bar, `/contact`
-- [ ] Phase 5b: EN | ES toggle with `lib/copy.ts`
+- [x] Phase 5: Stay Planner with live bed diagram, pre-selects, WhatsApp and Airbnb fallback, mobile sticky bar, `/contact`
+- [x] Phase 5b: EN | ES toggle with `lib/copy.ts`
 - [ ] Phase 6: launch switch, titles and descriptions, single h1, JSON-LD, robots, sitemap, `llms.txt`, OG image, favicon, 404, `SEO-LAUNCH.md`
 - [ ] Phase 6b: Lighthouse on a production build, live and demo, mobile and desktop
 - [ ] Phase 7: final review, commit, ready for GitHub and Vercel

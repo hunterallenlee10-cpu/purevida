@@ -47,7 +47,7 @@ export function Proof() {
           <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-6">
             <CheckDatesButton />
             <span className="inline-flex items-center gap-3 text-[0.9375rem] font-medium">
-              <Image src="/brand/sloth-badge.png" alt="" width={44} height={44} className="rounded-full ring-1 ring-line" />
+              <Image src="/brand/sloth-badge-112.webp" unoptimized alt="" width={44} height={44} className="rounded-full ring-1 ring-line" />
               Pura Vida Sloth Escapes
             </span>
           </div>

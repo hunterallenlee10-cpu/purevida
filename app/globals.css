@@ -39,7 +39,7 @@
     font-family: var(--font-display);
     font-optical-sizing: auto;
     font-weight: 400;
-    letter-spacing: -0.015em;
+    letter-spacing: 0.005em;
     text-wrap: balance;
   }
   p { text-wrap: pretty; }
@@ -79,8 +79,10 @@
     text-transform: uppercase;
   }
 
-  .h2 { font-size: clamp(2.125rem, 1.4rem + 2.6vw, 3.5rem); line-height: 1.05; }
+  .h2 { font-size: clamp(2.125rem, 1.4rem + 2.6vw, 3.5rem); line-height: 1.05; letter-spacing: -0.008em; }
   .h3 { font-size: clamp(1.375rem, 1.1rem + 0.8vw, 1.75rem); line-height: 1.15; }
+  /* The display cut (optical size 144) needs a little air at text sizes. */
+  .font-display { letter-spacing: 0.01em; }
   .lede { font-size: 1.125rem; line-height: 1.6; color: var(--color-muted); max-width: 46ch; }
 
   /* Buttons: 48px tall, press states only. */

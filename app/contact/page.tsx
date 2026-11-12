@@ -8,18 +8,13 @@ import { FinalCta } from "@/components/sections/FinalCta";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 import { isLive } from "@/lib/site";
+import { pageMeta } from "@/lib/seo";
 
 const title = "Contact Casa Esmeralda | Vacation Rental in Herradura";
 const description =
   "Plan your stay at Casa Esmeralda Ridge in Herradura, Costa Rica. Send your dates and group size to Melina, or book instantly on Airbnb.";
 
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: { canonical: "/contact" },
-  openGraph: { url: "/contact", title, description },
-  twitter: { title, description },
-};
+export const metadata: Metadata = pageMeta({ title, description, path: "/contact" });
 
 export default function Contact() {
   return (

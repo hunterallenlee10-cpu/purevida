@@ -39,13 +39,13 @@ export function Hero() {
       </div>
 
       <div className="container-x relative flex flex-1 flex-col justify-end pb-[104px] pt-[96px] md:pb-20 lg:pb-24">
-        <div className="max-w-[46rem]">
+        <div className="max-w-[52rem]">
           <h1 id="hero-title" className="font-normal">
             <span className="eyebrow block text-[0.75rem] leading-relaxed text-limestone sm:text-[0.8125rem]">{t.hero.eyebrow}</span>
             <span aria-hidden="true" className="mt-2 block font-sans text-[0.8125rem] font-medium tracking-[0.06em] text-limestone/90">
               <BioLine dark />
             </span>
-            <span className="relative mt-5 block font-display text-[clamp(2.75rem,1.6rem+5.2vw,6rem)] leading-[1.0] tracking-[-0.012em] text-limestone [font-variation-settings:'opsz'_144]">
+            <span className="relative mt-5 block whitespace-nowrap font-display text-[clamp(2.125rem,min(11.2vw,1.6rem+5.2vw),6rem)] leading-[1.0] tracking-[-0.012em] text-limestone [font-variation-settings:'opsz'_144]">
               <span className="waterline-track" aria-hidden="true" key={`wl-${lang}`} />
               <span className="surface-line" data-line="1">{t.hero.line1}</span>
               <span className="surface-line" data-line="2">

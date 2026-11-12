@@ -48,7 +48,7 @@ export function Reviews() {
         <ul className="mt-12 grid gap-5 lg:mt-14 lg:grid-cols-3">
           {quotes.map((q) => (
             <li key={q.name} className="flex flex-col rounded-[20px] border border-limestone/15 bg-limestone/[0.05] p-6 sm:p-8">
-              <blockquote lang="en" className="flex-1 font-display text-[1.1875rem] leading-[1.5] sm:text-[1.25rem]">
+              <blockquote lang="en" className="flex-1 font-display text-[1.1875rem] font-[450] leading-[1.5] sm:text-[1.25rem]">
                 <p>&ldquo;{q.text}&rdquo;</p>
               </blockquote>
               <div className="mt-6 border-t border-limestone/15 pt-5">

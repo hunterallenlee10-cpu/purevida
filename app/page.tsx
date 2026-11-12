@@ -17,24 +17,14 @@ import { FinalCta } from "@/components/sections/FinalCta";
 import { JsonLd } from "@/components/JsonLd";
 import { faqSchema, vacationRentalSchema } from "@/lib/schema";
 import { isLive } from "@/lib/site";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Vacation Rental in Herradura, Costa Rica | Casa Esmeralda",
   description:
     "Brand-new 3-bedroom vacation home with a private waterfall pool in gated Arenas, Herradura, Costa Rica. 5 minutes from the beach. Check your dates.",
-  alternates: { canonical: "/" },
-  openGraph: {
-    url: "/",
-    title: "Vacation Rental in Herradura, Costa Rica | Casa Esmeralda",
-    description:
-      "Brand-new 3-bedroom vacation home with a private waterfall pool in gated Arenas, Herradura, Costa Rica. 5 minutes from the beach. Check your dates.",
-  },
-  twitter: {
-    title: "Vacation Rental in Herradura, Costa Rica | Casa Esmeralda",
-    description:
-      "Brand-new 3-bedroom vacation home with a private waterfall pool in gated Arenas, Herradura, Costa Rica. 5 minutes from the beach. Check your dates.",
-  },
-};
+  path: "/",
+});
 
 export default function HomePage() {
   return (

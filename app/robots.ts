@@ -5,6 +5,6 @@ import { isLive, siteUrl } from "@/lib/site";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [{ userAgent: "*", allow: "/" }],
-    ...(isLive ? { sitemap: `${siteUrl}/sitemap.xml`, host: siteUrl } : {}),
+    ...(isLive ? { sitemap: `${siteUrl}/sitemap.xml` } : {}),
   };
 }

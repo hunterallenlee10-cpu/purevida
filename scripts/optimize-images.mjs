@@ -53,6 +53,9 @@ async function brand() {
   await fs.mkdir(brandDir, { recursive: true });
   // 112px covers the 56px footer badge at 2x. The source is only 176px across, so never larger.
   await fs.writeFile(path.join(brandDir, "sloth-badge.png"), await badgeCircle(112));
+  // Pre-sized WebP badges served as-is (no runtime optimizer): 80px for the 40px nav badge, 112px for 56px.
+  await sharp(await badgeCircle(80)).webp({ quality: 85 }).toFile(path.join(brandDir, "sloth-badge-80.webp"));
+  await sharp(await badgeCircle(112)).webp({ quality: 85 }).toFile(path.join(brandDir, "sloth-badge-112.webp"));
   // Icons: badge circle on a limestone square.
   for (const [name, size, pad] of [["icon.png", 192, 10], ["apple-icon.png", 180, 14]]) {
     const inner = size - pad * 2;

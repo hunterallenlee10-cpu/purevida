@@ -33,7 +33,7 @@ Spec demo by Lee Enterprises Unlimited. Front-end only. One goal: every action l
 
 ## Build checklist
 
-- [ ] Phase 1: scaffold, tokens, fonts, wordmark, nav, hero with the video loop and the waterline reveal, footer
+- [x] Phase 1: scaffold, tokens, fonts, wordmark, nav, hero with the video loop and the waterline reveal, footer
 - [ ] Phase 2: private side and community side, A Day at Casa Esmeralda dial (six stops, auto-play once, keyboard)
 - [ ] Phase 3: rooms tour with arched frames, amenities, gallery with filters and lightbox
 - [ ] Phase 4: Arenas bento, proof, nearby strip, reviews band, FAQ, final call to action

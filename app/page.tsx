@@ -6,6 +6,8 @@ import { BackToTop } from "@/components/layout/BackToTop";
 import { Hero } from "@/components/sections/Hero";
 import { TwoWorlds } from "@/components/sections/TwoWorlds";
 import { DayDial } from "@/components/DayDial/DayDial";
+import { House } from "@/components/sections/House";
+import { Gallery } from "@/components/sections/Gallery";
 import { isLive } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -33,7 +35,8 @@ export default function HomePage() {
         <Hero />
         <TwoWorlds />
         <DayDial />
-        <div id="the-house" className="h-[40vh]" />
+        <House />
+        <Gallery />
       </main>
       <Footer showConcept={!isLive} />
       <MobileBar />

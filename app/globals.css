@@ -137,6 +137,11 @@
     color: var(--color-muted); font-size: 0.875rem; line-height: 1.45;
   }
 
+  /* A row that starts on the container's left edge and bleeds off the right edge of the screen. */
+  .bleed-row { --gutter: 16px; padding-inline: max(var(--gutter), calc((100vw - 1280px) / 2 + var(--gutter))); scroll-padding-inline: max(var(--gutter), calc((100vw - 1280px) / 2 + var(--gutter))); }
+  @media (min-width: 640px) { .bleed-row { --gutter: 24px; } }
+  @media (min-width: 1024px) { .bleed-row { --gutter: 40px; } }
+
   .no-scrollbar { scrollbar-width: none; }
   .no-scrollbar::-webkit-scrollbar { display: none; }
 }

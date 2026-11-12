@@ -6,6 +6,7 @@ import { useLang } from "@/components/providers/LanguageProvider";
 import { CheckDatesButton } from "@/components/ui/CheckDatesButton";
 import { Arch } from "@/components/ui/Arch";
 import { photo, src } from "@/lib/gallery";
+import { coverSizes } from "@/lib/sizes";
 
 const privateIcons: LucideIcon[] = [Waves, Flame, Tv, CookingPot];
 const arenasIcons: LucideIcon[] = [Droplets, Dumbbell, Laptop, Puzzle];
@@ -50,7 +51,7 @@ export function TwoWorlds() {
                   src={src(deck)}
                   alt={deck.alt[lang]}
                   fill
-                  sizes="(min-width: 768px) 400px, 90vw"
+                  sizes={coverSizes(deck, 4 / 5, ["(min-width: 768px) 400px", "90vw"])}
                   className="object-cover object-[45%_50%]"
                 />
               </div>

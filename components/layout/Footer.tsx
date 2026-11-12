@@ -14,8 +14,8 @@ export function Footer({ showConcept, onHome = true }: { showConcept: boolean; o
   return (
     <footer className="on-dark bg-jungle pb-28 pt-20 text-limestone md:pb-12">
       <div className="container-x">
-        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
-          <div>
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr]">
+          <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" aria-label={t.nav.home} className="inline-block rounded-full">
               <Wordmark size="footer" tone="light" />
             </Link>

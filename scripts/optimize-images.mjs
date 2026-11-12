@@ -78,6 +78,13 @@ async function poster() {
     .resize(1600)
     .webp({ quality: 78 })
     .toFile(path.join(genDir, "gen-03-hero-poster.webp"));
+  // Phones: a portrait crop of the same still (the half with the pool and waterfall), so the
+  // hero is sharp on high-density screens without shipping the full landscape frame.
+  const src = path.join(genDir, "gen-03-hero-pool-waterfall-upscaled.jpg");
+  const crop = { left: 1440, top: 0, width: 1440, height: 2160 }; // right half: pool and waterfall
+  for (const [w, q] of [[720, 62], [840, 58]]) {
+    await sharp(src).extract(crop).resize(w).webp({ quality: q, effort: 6 }).toFile(path.join(genDir, `gen-03-hero-portrait-${w}.webp`));
+  }
   console.log("poster: written");
 }
 

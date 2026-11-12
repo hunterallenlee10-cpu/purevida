@@ -199,10 +199,10 @@
   --rdp-range_end-date-background-color: var(--color-accent);
   --rdp-range_start-color: #fff;
   --rdp-range_end-color: #fff;
-  --rdp-day-width: 44px;
-  --rdp-day-height: 44px;
-  --rdp-day_button-width: 42px;
-  --rdp-day_button-height: 42px;
+  --rdp-day-width: 46px;
+  --rdp-day-height: 46px;
+  --rdp-day_button-width: 44px;
+  --rdp-day_button-height: 44px;
   --rdp-selected-border: 2px solid var(--color-accent);
   --rdp-today-color: var(--color-accent);
   --rdp-disabled-opacity: 0.35;
@@ -214,6 +214,9 @@
   font-size: 0.9375rem;
 }
 .planner-calendar .rdp-months { gap: 2rem; flex-wrap: wrap; }
+@media (max-width: 374px) {
+  .planner-calendar .rdp-root { --rdp-day-width: 40px; --rdp-day-height: 42px; --rdp-day_button-width: 40px; --rdp-day_button-height: 40px; }
+}
 .planner-calendar .rdp-caption_label { font-family: var(--font-display); font-size: 1.25rem; font-weight: 400; }
 .planner-calendar .rdp-weekday { color: var(--color-muted); font-weight: 600; font-size: 0.8125rem; opacity: 1; }
 .planner-calendar .rdp-chevron { fill: var(--color-ink); }

@@ -25,7 +25,7 @@ export function Success({ s, H, onRestart }: { s: PlannerState; H: "h2" | "h3"; 
     ...(s.note.trim() ? ([[d.note, s.note.trim()]] as [string, string][]) : []),
   ];
 
-  const big = "btn w-full min-h-14 text-[1.0625rem]";
+  const big = "btn w-full min-h-14 whitespace-normal py-3 text-center text-[1.0625rem] leading-snug";
 
   return (
     <div className="step-fwd">

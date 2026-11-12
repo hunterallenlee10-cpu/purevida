@@ -77,7 +77,9 @@ export function Nav({ solid = false, onHome = true }: { solid?: boolean; onHome?
           </ul>
 
           <div className="flex items-center gap-2 sm:gap-4">
-            <LangToggle tone={light ? "light" : "ink"} />
+            <div className="hidden min-[400px]:block">
+              <LangToggle tone={light ? "light" : "ink"} />
+            </div>
             <a
               href={business.links.airbnb}
               target="_blank"

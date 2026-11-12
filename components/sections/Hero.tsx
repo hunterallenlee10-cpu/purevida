@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image, { getImageProps } from "next/image";
 import { useLang } from "@/components/providers/LanguageProvider";
 import { CheckDatesButton } from "@/components/ui/CheckDatesButton";
 import { AirbnbLink } from "@/components/ui/AirbnbLink";
@@ -8,6 +8,17 @@ import { BioLine } from "@/components/ui/BioLine";
 import { Arch } from "@/components/ui/Arch";
 import { HeroVideo } from "./HeroVideo";
 import { photo, src } from "@/lib/gallery";
+import { coverSizes } from "@/lib/sizes";
+
+// AI-generated visual (Higgsfield), approved by Hunter. Swap for real footage when the owner supplies it.
+const { props: heroStill } = getImageProps({
+  src: "/media/generated/gen-03-hero-pool-waterfall-upscaled.jpg",
+  alt: "",
+  fill: true,
+  quality: 70,
+  // Portrait-ish screens need the 4:3 frame at about 134% of the viewport height to cover it.
+  sizes: "(max-aspect-ratio: 4/3) 134vh, 100vw",
+});
 
 export function Hero() {
   const { t, lang } = useLang();
@@ -21,16 +32,15 @@ export function Hero() {
       {/* AI-generated visual (Higgsfield), approved by Hunter. Swap for real footage when the owner supplies it.
           Poster and reduced-motion still: the 4K upscale of the home's own pool photo 01. */}
       <div aria-hidden="true" className="absolute inset-0 -z-10">
-        <Image
-          src="/media/generated/gen-03-hero-pool-waterfall-upscaled.jpg"
-          alt=""
-          fill
-          priority
-          fetchPriority="high"
-          quality={70}
-          sizes="100vw"
-          className="hero-still object-cover object-[60%_55%]"
-        />
+        {/* Phones get a portrait crop of the same still (pre-sized 1x and 2x); larger screens get the landscape frame. */}
+        <picture>
+          <source
+            media="(max-width: 767px)"
+            type="image/webp"
+            srcSet="/media/generated/gen-03-hero-portrait-720.webp 1x, /media/generated/gen-03-hero-portrait-840.webp 2x"
+          />
+          <img {...heroStill} loading="eager" className="hero-still object-cover object-[85%_55%] md:object-[80%_55%]" />
+        </picture>
         <HeroVideo />
         {/* Readability: top fade for the nav, bottom 55% for the headline, a soft left fade on wide screens. */}
         <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[rgba(19,41,31,0.55)] to-transparent" />
@@ -76,15 +86,15 @@ export function Hero() {
           </ul>
         </div>
 
-        {/* Desktop only: the dining room opening onto the pool, in the arch. */}
-        <figure className="absolute bottom-24 right-10 hidden w-[220px] lg:block xl:right-[max(2.5rem,calc((100vw-1280px)/2+2.5rem))]">
+        {/* Wide screens only (1280px+), where it sits beside the waterfall instead of over it. */}
+        <figure className="absolute bottom-24 right-10 hidden w-[220px] xl:block">
           <Arch className="border-limestone/40 bg-[rgba(19,41,31,0.25)] backdrop-blur-[2px]">
             <div className="relative aspect-[3/4]">
               <Image
                 src={src(side)}
                 alt={side.alt[lang]}
                 fill
-                sizes="220px"
+                sizes={coverSizes(side, 3 / 4, ["220px"])}
                 quality={75}
                 className="object-cover object-[55%_50%]"
               />

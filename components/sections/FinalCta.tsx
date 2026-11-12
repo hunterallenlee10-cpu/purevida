@@ -20,7 +20,7 @@ export function FinalCta() {
                 src={src(pool)}
                 alt={pool.alt[lang]}
                 fill
-                sizes="(min-width: 1280px) 1184px, 100vw"
+                sizes="(min-width: 1280px) 1184px, (min-width: 640px) 100vw, 205vw"
                 className="object-cover object-[60%_60%]"
               />
               <div aria-hidden="true" className="absolute inset-0 bg-[rgba(19,41,31,0.35)]" />

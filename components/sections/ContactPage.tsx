@@ -9,6 +9,7 @@ import { StayPlanner } from "@/components/StayPlanner/StayPlanner";
 import { business } from "@/lib/business";
 import { messageHref } from "@/lib/contact";
 import { photo, src } from "@/lib/gallery";
+import { coverSizes } from "@/lib/sizes";
 
 const tileIcon: Record<string, LucideIcon> = { message: MessageCircle, airbnb: ArrowUpRight, instagram: Instagram };
 const tileHref: Record<string, string> = { message: messageHref, airbnb: business.links.airbnb, instagram: business.links.instagram };
@@ -41,7 +42,7 @@ export function ContactPage() {
             </div>
             <Arch className="mx-auto w-full max-w-[360px]">
               <div className="relative aspect-[4/5]">
-                <Image src={src(front)} alt={front.alt[lang]} fill priority sizes="360px" className="object-cover" />
+                <Image src={src(front)} alt={front.alt[lang]} fill priority sizes={coverSizes(front, 4 / 5, ["360px"])} className="object-cover" />
               </div>
             </Arch>
           </div>

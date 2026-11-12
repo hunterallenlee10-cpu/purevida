@@ -44,7 +44,7 @@ export function HeroVideo() {
       width={1600}
       height={1200}
       onPlaying={() => setPlaying(true)}
-      className={`absolute inset-0 h-full w-full object-cover object-[60%_55%] transition-opacity duration-700 ${playing ? "opacity-100" : "opacity-0"}`}
+      className={`absolute inset-0 h-full w-full object-cover object-[80%_55%] transition-opacity duration-700 ${playing ? "opacity-100" : "opacity-0"}`}
     >
       <source src="/media/generated/gen-02-hero-pool-waterfall-loop-webm.webm" type="video/webm" />
       <source src="/media/generated/gen-01-hero-pool-waterfall-loop.mp4" type="video/mp4" />

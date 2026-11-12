@@ -20,7 +20,7 @@ export function Wordmark({ size = "nav", tone = "ink" }: { size?: "nav" | "foote
         <span className={`font-display font-semibold tracking-[0.015em] ${size === "nav" ? "text-[1.3125rem]" : "text-[1.625rem]"}`}>
           Casa Esmeralda
         </span>
-        <span className={`mt-1 font-sans font-semibold uppercase tracking-[0.3em] ${size === "nav" ? "text-[0.625rem]" : "text-[0.6875rem]"}`}>
+        <span className={`mt-1 font-sans font-semibold uppercase tracking-[0.3em] ${size === "nav" ? "text-[0.6875rem]" : "text-[0.75rem]"}`}>
           Ridge
         </span>
       </span>

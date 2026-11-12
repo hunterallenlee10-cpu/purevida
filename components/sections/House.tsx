@@ -10,6 +10,7 @@ import { useLang } from "@/components/providers/LanguageProvider";
 import { Arch } from "@/components/ui/Arch";
 import { Placeholder } from "@/components/ui/Placeholder";
 import { photo, src } from "@/lib/gallery";
+import { coverSizes } from "@/lib/sizes";
 
 const amenityIcons: LucideIcon[] = [Wifi, Laptop, Tv, WashingMachine, SquareParking, PlugZap, KeyRound, DoorOpen, AlarmSmoke];
 
@@ -64,7 +65,7 @@ export function House() {
                           src={src(p)}
                           alt={p.alt[lang]}
                           fill
-                          sizes="(min-width: 640px) 300px, 78vw"
+                          sizes={coverSizes(p, 3 / 4.2, ["(min-width: 640px) 300px", "78vw"])}
                           className="object-cover"
                         />
                       ) : (

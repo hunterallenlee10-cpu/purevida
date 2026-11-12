@@ -6,6 +6,7 @@ import { useLang } from "@/components/providers/LanguageProvider";
 import { Placeholder } from "@/components/ui/Placeholder";
 import { business } from "@/lib/business";
 import { photo, src } from "@/lib/gallery";
+import { coverSizes } from "@/lib/sizes";
 
 // Out the gate. No distances other than the host's own "5 minutes".
 export function Nearby() {
@@ -25,7 +26,7 @@ export function Nearby() {
                       src={src(p)}
                       alt={p.alt[lang]}
                       fill
-                      sizes="(min-width: 1024px) 300px, 48vw"
+                      sizes={coverSizes(p, 3 / 4, ["(min-width: 1024px) 300px", "48vw"])}
                       className="object-cover"
                     />
                   </div>
@@ -39,7 +40,7 @@ export function Nearby() {
           })}
         </ul>
 
-        <div className="mt-12 flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div className="mt-12 flex flex-col gap-6 xl:flex-row xl:items-center xl:justify-between">
           <div>
             <h3 className="eyebrow text-[0.75rem] text-muted">{t.nearby.chipsLabel}</h3>
             <ul className="mt-3 flex flex-wrap gap-2">

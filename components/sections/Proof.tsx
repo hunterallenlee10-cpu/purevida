@@ -7,6 +7,7 @@ import { CheckDatesButton } from "@/components/ui/CheckDatesButton";
 import { Arch } from "@/components/ui/Arch";
 import { Placeholder } from "@/components/ui/Placeholder";
 import { photo, src } from "@/lib/gallery";
+import { coverSizes } from "@/lib/sizes";
 
 const icons: LucideIcon[] = [Users, Languages, Clock, KeyRound];
 
@@ -23,7 +24,7 @@ export function Proof() {
               src={src(front)}
               alt={front.alt[lang]}
               fill
-              sizes="(min-width: 768px) 460px, 92vw"
+              sizes={coverSizes(front, 4 / 5, ["(min-width: 768px) 460px", "92vw"])}
               className="object-cover object-[50%_50%]"
             />
           </div>

@@ -7,6 +7,7 @@ import { useLang } from "@/components/providers/LanguageProvider";
 import { CheckDatesButton } from "@/components/ui/CheckDatesButton";
 import { dayStops, SUNSET_INDEX } from "@/lib/day";
 import { photo, src } from "@/lib/gallery";
+import { coverSizes } from "@/lib/sizes";
 
 const STEP = 100; // the range runs 0..500 so dragging feels continuous, then snaps to one of six stops
 const MAX = (dayStops.length - 1) * STEP;
@@ -133,7 +134,7 @@ export function DayDial() {
                   aria-hidden={show ? undefined : true}
                   fill
                   draggable={false}
-                  sizes="(min-width: 1160px) 1080px, 100vw"
+                  sizes={`(min-width: 1160px) 1080px, (min-width: 640px) 100vw, ${coverSizes(p, 4 / 5, ["100vw"])}`}
                   className={`object-cover transition-opacity duration-500 ease-out ${show ? "opacity-100" : "opacity-0"}`}
                   style={{ objectPosition: focal[s.photo] }}
                 />

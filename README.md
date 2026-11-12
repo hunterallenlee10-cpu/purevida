@@ -36,7 +36,9 @@ All photos are the home's own Airbnb listing photos. The only AI-generated visua
 
 ## Deploy (Vercel)
 
-1. Push this repo to GitHub.
-2. In Vercel, Add New Project, import the repo (framework preset: Next.js, no settings to change).
-3. Leave `NEXT_PUBLIC_SITE_MODE` unset (demo). Optionally set `NEXT_PUBLIC_SITE_URL` to the preview domain.
-4. Vercel Web Analytics turns on automatically on Vercel deployments (enable it in the project's Analytics tab).
+The site is the Vercel project `casa-esmeralda-ridge` (team `leu`), linked to this repo.
+
+- **Production:** every push or merge to `main` deploys to https://casa-esmeralda-ridge.vercel.app.
+- **Previews:** every other branch and every pull request gets its own preview URL (behind Vercel login).
+- **Mode:** `NEXT_PUBLIC_SITE_MODE` is unset, so production runs in demo mode (noindex). Flip it to `live` only on launch day; see `SEO-LAUNCH.md`.
+- **Analytics:** Vercel Web Analytics loads on Vercel deployments only; enable it in the project's Analytics tab to see visits.

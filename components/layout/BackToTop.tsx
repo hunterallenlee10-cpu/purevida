@@ -24,7 +24,7 @@ export function BackToTop() {
         document.getElementById("top")?.focus({ preventScroll: true });
       }}
       aria-label={t.footer.backToTop}
-      className="fixed bottom-24 right-4 z-30 inline-flex size-12 items-center justify-center rounded-full border border-line bg-surface text-ink shadow-[0_12px_32px_rgba(19,41,31,0.12)] transition-colors hover:bg-limestone md:bottom-8 md:right-8"
+      className="fixed bottom-[92px] right-3 z-30 inline-flex size-11 md:size-12 items-center justify-center rounded-full border border-line bg-surface text-ink shadow-[0_12px_32px_rgba(19,41,31,0.12)] transition-colors hover:bg-limestone md:bottom-8 md:right-8"
     >
       <ArrowUp aria-hidden="true" className="size-5" strokeWidth={1.5} />
     </button>

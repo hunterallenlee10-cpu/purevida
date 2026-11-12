@@ -32,6 +32,7 @@ const en = {
   },
   split: {
     title: "Two worlds behind one gate.",
+    lede: "The house and its pool are yours alone. The resort around it is shared with Arenas.",
     privateTitle: "Your private side",
     privateItems: [
       "Private pool with a stone waterfall",
@@ -302,6 +303,7 @@ const es: Copy = {
   },
   split: {
     title: "Dos mundos detrás de un mismo portón.",
+    lede: "La casa y su piscina son solo para ustedes. El resort alrededor se comparte con Arenas.",
     privateTitle: "Su lado privado",
     privateItems: [
       "Piscina privada con cascada de piedra",

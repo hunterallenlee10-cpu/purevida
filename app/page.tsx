@@ -4,6 +4,8 @@ import { Footer } from "@/components/layout/Footer";
 import { MobileBar } from "@/components/layout/MobileBar";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { Hero } from "@/components/sections/Hero";
+import { TwoWorlds } from "@/components/sections/TwoWorlds";
+import { DayDial } from "@/components/DayDial/DayDial";
 import { isLive } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -29,7 +31,9 @@ export default function HomePage() {
       <Nav />
       <main id="main">
         <Hero />
-        <div className="h-[60vh]" />
+        <TwoWorlds />
+        <DayDial />
+        <div id="the-house" className="h-[40vh]" />
       </main>
       <Footer showConcept={!isLive} />
       <MobileBar />
